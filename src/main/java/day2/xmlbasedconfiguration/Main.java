@@ -3,9 +3,10 @@ package day2.xmlbasedconfiguration;
 import day2.pojo.AccountService;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class main {
+public class Main {
     public static void main(String [] args){
-        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("xmlbasedconfiguration/beans.xml");
+//        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("xmlbasedconfiguration/beans.xml");
+        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("annotationbasedconfiguration/beans.xml");
         AccountService accountService = applicationContext.getBean("accountService", AccountService.class);
         System.out.println("Before money transfer");
         System.out.println("Account 1 balance" + accountService.getAccount(1).getBalance());

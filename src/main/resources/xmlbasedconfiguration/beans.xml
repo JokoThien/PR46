@@ -2,11 +2,9 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <!-- bean definitions here -->
-    <bean id = "accountRepository" class = "day2.pojo.AccountRepositoryIml">
-    </bean>
-    <bean id = "accountService" class = "day2.pojo.AccountServiceIml">
-        <property name="accountRepository" ref="accountRepository"></property>
 
+    <bean id = "drawCircle" class = "btday2.DrawCircle">
+    </bean>
+    <bean id = "Student" class = "btday2.Student" autowire="byType">
     </bean>
 </beans>
